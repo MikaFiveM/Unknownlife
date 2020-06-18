@@ -65,24 +65,24 @@ $(document).ready(function(e) {
 	}
    console.clear();
    var commandlist = [ /*Can be populated with various methods*/
-      ["/help", "Befehle Anzeigen"],
-      ["/list", "Liste alle Seiten auf."],
-      ["/nav &lt;location&gt;", "Navigiere zu einer Seite"],
-      ["/clear", "Leere die Konsole"]
+      ["/help", "Show Commands"],
+      ["/list", "List all pages"],
+      ["/nav &lt;location&gt;", "Navigate to a page"],
+      ["/clear", "clear the console"]
    ];
    var previouscommands = [];
    var currentcommand = 0;
    var pages = [ /*Can be populated with various methods*/
-      ["Codein", "Du möchtest Codein Dealen?!",
-      "Wo du es Heimlich Verarbeiten kannst und Heimlich es den Pennern Verkaufen kannst kann ich dir genz einfach sagen!",
-      "Doch wo du es her bekommst weiß ich nicht Genau... Ich glaube",
-      "Es liegt unter einer Autobahn auf so einem Schrottplatz? Glaube ich? Aufjdenfall sieht es so aus wie ein Schrottplatz Wo du Verkaufen & Verarbiten kannst erfährst du dann an der Plantage an einem Computer"],
-      ["Kokain", "Also Kokain?",
-      "Mhm da Weiß ich leider nicht viel.... Frag doch mal in Sandy Shores paar Leute.. Ich kenne mich da aber nicht so gut aus.",
-      "Aber pass auf Frag nicht die Falschen Personen!"],
-	  ["Geldwäsche", "Mhm das ist Einfach! Hier: x=1055.73, y=-1902.42"]
+      ["Codein", "You want to sell codein?!",
+      "Where you can secretly process it and secretly sell it to the bums I can tell you quite simply!",
+      "But where you get it from I don't know Exactly. . . I think",
+      "It's under a highway on a junkyard like this? I think so? Anyway, it looks like a junkyard. Where you can sell and process, you'll find out at the plantation on a computer"],
+      ["Cocaine", "So cocaine?",
+      "Mhm because I don't know much... Ask some people in Sandy Shores...",
+      "But don't ask the wrong person!!"],
+      ["money laundering", "Mhm, that's easy! Here: x=1055. 73, y=-1902. 42"]
    ];
-   var pageindex = ["Codein", "Kokain", "Geldwäsche"];
+   var pageindex = ["Codein", "Cocaine", "Money Laundering"];
    var currentpage = "landing";
    var url = ""
       /*
@@ -100,7 +100,7 @@ $(document).ready(function(e) {
       setInterval(time);
       console.clear();
       console.log(new Date().getTime());
-      log("Client", "FÃ¼r Hilfe gebe '/help' ein");
+      log("Client", "For help enter /help");
 	  setInterval(favicon,500);
    }
 
@@ -114,7 +114,7 @@ $(document).ready(function(e) {
                currentpage = pageloc;
             }
 		}
-      	log("Website", "Momentan Befindest du dich auf der Seite: *" + currentpage + "*");
+      	log("Website", "At the moment you are on the page:: *" + currentpage + "*");
 		if(pageloc != "") {
             if ($.inArray(pageloc, pageindex) >= 0) {
                currentpage = pageloc;
