@@ -40,7 +40,7 @@ Citizen.CreateThread(function ()
 
         if nearULA1() then
             if not robbing then
-                ESX.ShowHelpNotification("Drücke ~INPUT_CONTEXT~ um auf das Terminal zuzugreifen")
+                ESX.ShowHelpNotification("Press ~INPUT_CONTEXT~ to access the terminal")
 
                 if IsControlJustPressed(1,51) then
                     SetDisplay(not display)
